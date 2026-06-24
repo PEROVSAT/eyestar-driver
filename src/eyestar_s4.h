@@ -10,11 +10,30 @@
 	#include "eyestar_s4_lib.h"
 #endif
 
-// This is the public API definition
-struct eyestar_s4_driver_api {
-	// Add function definitions like
-	// int (*read_sensor)(const struct device *dev, uint8_t *val);
-};
+typedef enum {
+	FAIL_MODEM,
+	FAIL_NETWORK,
+	SENT
+} tx_status_t;
+
+typedef struct {
+	bool uplinks_pending;
+	size_t bytes_received;
+	tx_status_t tx_status;
+} eyestar_transfer_result_t;
+
+// Since this driver is so direct, we are skipping doing the whole API struct,
+// 	and just declaring this as a public function
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+int eyestar_transfer(const struct device *dev, const uint8_t *tx_buf, size_t tx_len,
+		     uint8_t *rx_buf, eyestar_transfer_result_t *res);
+
+#ifdef __cplusplus
+}
+#endif
 
 // Static config data, filled at init
 struct eyestar_s4_config {

@@ -11,24 +11,20 @@
 
 LOG_MODULE_REGISTER(eyestar_s4, CONFIG_LOG_DEFAULT_LEVEL);
 
-// Static API functions that are defined in eyestar_s4.h get implemented here
+// Public API functions that are defined in eyestar_s4.h get implemented here
 
-/*
-static int read_sensor(const struct device *dev, uint8_t *val)
+int eyestar_transfer(const struct device *dev, const uint8_t *tx_buf, size_t tx_len,
+		     uint8_t *rx_buf, eyestar_transfer_result_t *res)
 {
-	#if !defined(CONFIG_PEROVSAT_EYESTAR_S4_BACKEND_PUBLIC_MOCK)
-		return eyestar_s4_lib_read_sensor(eyestar_s4_transfer, dev, val);
-	#else
-		ARG_UNUSED(dev);
-		*val = 0x01;
-		return 0;
-	#endif
+#if !defined(CONFIG_PEROVSAT_EYESTAR_S4_BACKEND_PUBLIC_MOCK)
+	return 0; // Not implemented
+#else
+	res->uplinks_pending = 0;
+	res->bytes_received = 0;
+	res->tx_status = SENT;
+	return 0;
+#endif
 }
-*/
-
-const struct eyestar_s4_driver_api eyestar_s4_api = {
-	// .read_sensor = read_sensor,
-};
 
 static int eyestar_s4_init(const struct device *dev)
 {
@@ -52,7 +48,6 @@ static int eyestar_s4_init(const struct device *dev)
 		/* FILL IN: .bus = I2C_DT_SPEC_INST_GET(inst), */                                  \
 	};                                                                                         \
 	DEVICE_DT_INST_DEFINE(inst, eyestar_s4_init, NULL, &eyestar_s4_data_##inst,                \
-			      &eyestar_s4_config_##inst, BOOT_STAGE, BOOT_PRIORITY,                \
-			      &eyestar_s4_api);
+			      &eyestar_s4_config_##inst, BOOT_STAGE, BOOT_PRIORITY, NULL);
 
 DT_INST_FOREACH_STATUS_OKAY(EYESTAR_S4_INIT)

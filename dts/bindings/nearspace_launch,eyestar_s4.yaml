@@ -2,8 +2,7 @@ description: EYESTAR_S4 device driver
 
 compatible: "nearspace_launch,eyestar_s4"
 
-# FILL IN: include bus binding if the device sits on a bus, e.g.:
-# include: i2c-device.yaml
+include: base.yaml
 
-properties:
+# properties:
   # FILL IN: devicetree properties (mirror struct eyestar_s4_config fields)
