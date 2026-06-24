@@ -6,30 +6,30 @@
 
 #include <zephyr/device.h>
 
-#if !defined(CONFIG___KCONFIG_SYM___BACKEND_PUBLIC_MOCK)
-	#include "__DRIVER_SLUG___lib.h"
+#if !defined(CONFIG_PEROVSAT_EYESTAR_S4_BACKEND_PUBLIC_MOCK)
+	#include "eyestar_s4_lib.h"
 #endif
 
 // This is the public API definition
-struct __DRIVER_SLUG___driver_api {
+struct eyestar_s4_driver_api {
 	// Add function definitions like
 	// int (*read_sensor)(const struct device *dev, uint8_t *val);
 };
 
 // Static config data, filled at init
-struct __DRIVER_SLUG___config {
+struct eyestar_s4_config {
 	// Mirror the devicetree properties here
 
-#if defined(CONFIG___KCONFIG_SYM___BACKEND_HARDWARE)
+#if defined(CONFIG_PEROVSAT_EYESTAR_S4_BACKEND_HARDWARE)
 	// Add bus spec here
 #endif
 };
 
 // Mutable state during runtime
-struct __DRIVER_SLUG___data {
+struct eyestar_s4_data {
 	// Things like cached samples go here
 
-#if defined(CONFIG___KCONFIG_SYM___BACKEND_SIMULATION)
+#if defined(CONFIG_PEROVSAT_EYESTAR_S4_BACKEND_SIMULATION)
 	// Define things like a socket fd
 #endif
 };

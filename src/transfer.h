@@ -17,7 +17,7 @@ struct device;
  *
  * @return 0 on success, negative errno on failure.
  */
-int __DRIVER_SLUG___transfer(void *ctx, uint8_t reg, uint8_t *buf, size_t len, bool read);
+int eyestar_s4_transfer(void *ctx, uint8_t reg, uint8_t *buf, size_t len, bool read);
 
 /**
  * Initialize transport for this device instance.
@@ -29,4 +29,4 @@ int __DRIVER_SLUG___transfer(void *ctx, uint8_t reg, uint8_t *buf, size_t len, b
  *
  * @return 0 on success, negative errno on failure.
  */
-int __DRIVER_SLUG___transfer_init(const struct device *dev);
+int eyestar_s4_transfer_init(const struct device *dev);
