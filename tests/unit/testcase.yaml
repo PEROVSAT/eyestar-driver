@@ -1,0 +1,7 @@
+tests:
+  __MODULE_NAME__.unit:
+    tags:
+      - drivers
+    platform_allow:
+      - qemu_cortex_m3
+      - rpi_pico2/rp2350a/m33
