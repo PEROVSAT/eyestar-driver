@@ -1,4 +1,4 @@
-name: __MODULE_NAME__
+name: eyestar-driver
 build:
   cmake: .
   kconfig: Kconfig

@@ -5,6 +5,6 @@ set(BOARD_FLASH_RUNNER uf2)
 list(APPEND ZEPHYR_EXTRA_MODULES ${CMAKE_CURRENT_SOURCE_DIR}/../..)
 
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
-project(__DRIVER_SLUG___repl)
+project(eyestar_repl)
 
 target_sources(app PRIVATE src/main.c)

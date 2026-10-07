@@ -1,0 +1,10 @@
+description: EYESTAR device driver
+
+compatible: "nearspacelaunch,eyestar"
+
+# FILL IN when bringing up hardware, e.g.:
+#   include: i2c-device.yaml
+#   on-bus: i2c
+
+properties:
+  # FILL IN: mirror fields of eyestar_config_t
