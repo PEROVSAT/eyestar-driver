@@ -52,10 +52,7 @@ static int eyestar_driver_init(const struct device *dev)
 #define EYESTAR_INIT(inst)                                                                         \
 	static struct eyestar_driver_data eyestar_data_##inst;                                     \
 	static const struct eyestar_driver_config eyestar_config_##inst = {                        \
-		.chip =                                                                            \
-			{                                                                          \
-				.unused = 0, /* FILL IN: .foo = DT_INST_PROP(inst, foo), */        \
-			},                                                                         \
+		.chip = {},                                                                        \
 	};                                                                                         \
 	DEVICE_DT_INST_DEFINE(inst, eyestar_driver_init, NULL, &eyestar_data_##inst,               \
 			      &eyestar_config_##inst, BOOT_STAGE, BOOT_PRIORITY, NULL);

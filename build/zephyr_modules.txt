@@ -1,0 +1,8 @@
+"mpu6050-driver":"/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/mpu6050-driver":"/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/mpu6050-driver"
+"amu-driver":"/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/amu-driver":"/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/amu-driver"
+"cmsis":"/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/modules/hal/cmsis":"${ZEPHYR_CMSIS_CMAKE_DIR}"
+"cmsis_6":"/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/modules/hal/cmsis_6":"${ZEPHYR_CMSIS_6_CMAKE_DIR}"
+"hal_rpi_pico":"/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/modules/hal/rpi_pico":"${ZEPHYR_HAL_RPI_PICO_CMAKE_DIR}"
+"hal_stm32":"/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/modules/hal/stm32":"/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/modules/hal/stm32"
+"littlefs":"/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/modules/fs/littlefs":"${ZEPHYR_LITTLEFS_CMAKE_DIR}"
+"eyestar-driver":"/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/eyestar-driver/samples/repl/../..":"/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/eyestar-driver"

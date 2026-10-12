@@ -1,0 +1,12 @@
+# WARNING. THIS FILE IS AUTO-GENERATED. DO NOT MODIFY!
+#
+# This file contains build system settings derived from your modules.
+#
+# Modules may be set via ZEPHYR_MODULES, ZEPHYR_EXTRA_MODULES,
+# and/or the west manifest file.
+#
+# See the Modules guide for more information.
+"DTS_ROOT":"/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/mpu6050-driver"
+"DTS_ROOT":"/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/amu-driver"
+"DTS_ROOT":"/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/modules/hal/stm32"
+"DTS_ROOT":"/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/eyestar-driver/samples/repl/../.."

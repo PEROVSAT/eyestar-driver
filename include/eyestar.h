@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stddef.h>
 #include <stdint.h>
 
 #ifdef __cplusplus
@@ -35,9 +36,9 @@ typedef struct eyestar {
 } eyestar_t;
 
 int eyestar_init(eyestar_t *dev, const eyestar_config_t *cfg);
-int eyestar_send_pkt(eyestar_t *dev, const uint8_t *pkt);
-int eyestar_fetch_pkt(eyestar_t *dev, uint8_t *pkt);
-int eyestar_get_pkt(eyestar_t *dev, uint8_t *pkt);
+int eyestar_send_pkt(eyestar_t *dev, const uint8_t *pkt, size_t pkt_len);
+int eyestar_fetch_pkt(eyestar_t *dev);
+int eyestar_get_pkt(eyestar_t *dev, uint8_t *buf, size_t buf_capacity, size_t *pkt_len);
 /* App glue: Zephyr `struct device` → this object. Implemented in src/. */
 struct device;
 eyestar_t *eyestar_from_dev(const struct device *dev);

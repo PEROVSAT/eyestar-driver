@@ -1,0 +1,2 @@
+# Load Sysbuild board Kconfig descriptions.
+osource "/home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/zephyr/boards/raspberrypi/rpi_pico2/Kconfig.sysbuild"
