@@ -1,5 +1,0 @@
-west:
-  command: /home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace/.venv/bin/west
-    build -p always -b rpi_pico2/rp2350a/m33 samples/repl
-  topdir: /home/not_cn_nguyen/CodeFile/PEROVSAT/perovsat-workspace
-  version: 1.5.0
